@@ -1,1 +1,3 @@
 Now we will start UI : HTML,CSS and JavaScript
+
+Session 3 is JavaScript we will start now 
