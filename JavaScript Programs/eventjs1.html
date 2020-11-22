@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+    function dis1() {
+        // document.formName.componentName.value;
+        var name = document.f1.uname.value;
+        alert("Welcome "+name);
+    }
+    function dis2(name) {
+            alert("Welcome "+name);
+    }
+    function dis3() {
+        var name = document.getElementById("n1").value;
+        alert("Welcome "+name);
+    }
+    </script>
+</head>
+<body>
+    <form name="f1">
+    <label>Name:</label>
+    <input type="text" name="uname" id="n1"/>
+    <br/>
+    <input type="button" value="click Here" onclick="dis1()"/>
+    <input type="button" value="click Here" onclick="dis2(uname.value)"/>
+    <input type="button" value="click Here" onclick="dis3()"/>
+    </form>
+</body>
+</html>

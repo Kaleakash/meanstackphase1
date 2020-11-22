@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+    function validate() {
+        // alert("fun called....")
+        //return true;
+        var user = document.getElementById("uname").value 
+        var pass = document.getElementById("pname").value;
+        if(user.length==0){
+            //alert("User Name is requred")
+           //document.write("UserName is required");
+           document.getElementById("e2").innerHTML=""
+           document.getElementById("e1").innerHTML="UserName is required";
+            return false;
+        }else if(pass.length==0){
+          // alert("Password is requried")
+            //document.write("Password is required");
+            document.getElementById("e1").innerHTML=""
+            document.getElementById("e2").innerHTML="Password is required";
+            return false;
+        }else if(user=="Ravi" && pass=="123"){
+            alert("Successfully Login")
+            return true;
+        }else {
+            document.getElementById("e1").innerHTML=""
+            document.getElementById("e2").innerHTML=""
+            alert("Failure try once again")
+            return false;
+        }
+    }
+    function storeDetails() {
+    var Id = "Emp Id is "+document.getElementById("empId").value
+    var name = "Emp Name is "+document.getElementById("fname").value
+    var email = "Email Id is "+document.getElementById("emailId").value 
+    var profile = "Profile Id is "+document.getElementById("profile").value
+    var dob = "Dob  is "+document.getElementById("dob").value    
+    document.getElementById("details").innerHTML = Id+"<br/>"+name+"<br/>"+email+"<br/>"+profile+"<br/>"+dob;
+
+    return false;
+    }
+    </script>
+</head>
+<body>
+    <h2>Login Validation Using JavaScript</h2>
+    <form action="home.html" onsubmit="return validate()">
+        <label>UserName</label>
+        <input type="text" name="uname" id="uname"/>
+        <span id="e1" style="color:red;"></span>
+        <br/>
+        <label>Password</label>
+        <input type="password" name="pname" id="pname"/>
+        <span id="e2" style="color:red;"></span>
+        <br/>
+        <input type="submit" value="submit"/>
+        <input type="reset" value="reset"/>
+    </form>
+    <h2>Login Validation Using HTML5 Features</h2>
+    <form action="home.html">
+        <label>UserName</label>
+        <input type="text" name="uname" required minlength="4"/><br/>
+        <label>Password</label>
+        <input type="password" name="pname" required pattern="\D{2}@\d{3}"/><br/>
+        <input type="submit" value="submit"/>
+        <input type="reset" value="reset"/>
+    </form>
+
+    <h2>Application Page using HTML5 Features</h2>
+    <form onsubmit="return storeDetails()">
+    <label>Employee Id</label>
+    <input type="number" name="empId" id="empId" required/><br/>
+    <label>FName</label>
+    <input type="text" name="fname" id="fname" required/><br/>    
+    <label>EmailId</label>
+    <input type="email" name="emailId" id="emailId" required/><br/>
+    
+    <label>Linked Profile URL</label>
+    <input type="url" name="profile" id="profile" required/><br/>
+    
+    <label>DOB</label>
+    <input type="date" name="dob" id="dob" required/><br/>
+
+    <input type="submit" value="Store Employee Details"/>
+    </form>
+    <h2>Employee Details are </h2>
+    <div id="details" style="font-weight: bold;">
+
+    </div>
+</body>
+</html>
