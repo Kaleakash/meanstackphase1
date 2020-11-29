@@ -1,5 +1,16 @@
 document.write("Welcome to External JavaScript File<br/>")
+function Person(id,name){
+    this.id = id;
+    this.name = name;
+}
+let p1 = new Person(100,"Ravi");
+document.write("<br/>id is "+p1.id);
+document.write("<br/>name is "+p1.name);
+delete p1.name;
+document.write("<br/>After delete name property from person")
+document.write("<br/>name is "+p1.name);
 
+/*
 function Employee(id,name,age) {    // parameterized object 
     this.id = id;
     this.name = name;

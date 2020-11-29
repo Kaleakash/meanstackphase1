@@ -45,7 +45,7 @@ document.write("Value of j is "+j);
 //values. 
 /*
 var a = 10;                 //in C      int a=10; 
-var a = "Ravi";             //            a=20;     re-assinging 
+var a = "Ravi";   //re-declare           //            a=20;     re-assinging 
 
 let b =20;
 let b = "Ravi";         //Error in this line. 
