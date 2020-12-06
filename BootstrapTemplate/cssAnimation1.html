@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    div{background-color: coral;
+        color: white;
+        width: 550px;
+        height: 500px;
+        text-align: center;
+        margin: 10px;
+        padding: 15px;
+        border: black solid 10px;
+        display: inline-block;
+        border-radius: 25%;
+        }
+        
+        #d1 {
+            animation-name: myAnim1;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        #d2 {
+            animation-name: myAnim2;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        #d3 {
+            animation-name: myAnim3;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes myAnim1 {
+            to{background-color: red;}
+            from{background-color: green;}
+        }
+        @keyframes myAnim2 {
+            0%{background-color: red;}
+            25%{background-color: green;}
+            50%{background-color:blue}
+            75%{background-color:crimson}
+            100%{background-color:yellow}
+        }
+        @keyframes myAnim3 {
+            0%{background-image:url("1.jpg")}
+            25%{background-image:url("2.jpg")}
+            50%{background-image:url("3.jpg")}
+            75%{background-image:url("4.jpg")}
+            100%{background-image:url("5.jpg")}
+        }
+</style>
+</head>
+<body>
+    <div id="d1">
+        This is First Div Tag 
+    </div>
+    <div id="d2">
+        This is Second Div Tag 
+    </div>
+    <div id="d3">
+        This is Third Div Tag 
+    </div>
+</body>
+</html>

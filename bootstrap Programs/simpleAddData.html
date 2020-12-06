@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+    var names=[];
+    function addName() {
+        let name = document.getElementById("uname").value;
+        names.push(name);
+        //console.log(names);
+        document.getElementById("data").innerHTML = names;
+        document.getElementById("uname").value = ""
+    }
+    </script>
+</head>
+<body>
+    <form>
+    <label>Name:</label>
+    <textarea name="uname" id="uname">
+
+    </textarea><br/>
+    <input type="button" value="submit" onclick="addName()"/>
+    </form>
+
+    <hr/>
+    <div id="data">
+
+    </div>
+</body>
+</html>
